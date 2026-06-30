@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ссылки для гостей</title>
+
+<style>
+
+body{
+
+    margin:0;
+    padding:40px;
+
+    background:#f8f5f2;
+
+    font-family:Arial,sans-serif;
+
+}
+
+h1{
+
+    text-align:center;
+    margin-bottom:40px;
+
+}
+
+.guest{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:white;
+
+    padding:18px 20px;
+
+    margin-bottom:12px;
+
+    border-radius:14px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+}
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    background:#6fa8ff;
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+button:hover{
+
+    opacity:.9;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>💌 Персональные приглашения</h1>
+
+<div id="list"></div>
+
+<script src="guests.js"></script>
+
+<script>
+
+const baseUrl="https://ТВОЙ_САЙТ.com/";
+
+const list=document.getElementById("list");
+
+Object.entries(guests).forEach(([id,data])=>{
+
+    const row=document.createElement("div");
+
+    row.className="guest";
+
+    row.innerHTML=`
+        <div>${data.name}</div>
+        <button onclick="copyLink('${id}')">
+            📋 Копировать
+        </button>
+    `;
+
+    list.appendChild(row);
+
+});
+
+function copyLink(id){
+
+    navigator.clipboard.writeText(baseUrl+"?g="+id);
+
+    alert("Ссылка скопирована!");
+
+}
+
+</script>
+
+</body>
+
+</html>
