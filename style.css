@@ -250,28 +250,16 @@ body{
 /* ============================= */
 
 .frame-content{
-
     position:absolute;
-
-    top:50%;
+    top:48%;
     left:50%;
-
     transform:translate(-50%,-50%);
-
-    margin-top:13px;
-
-    width:70%;
-
+    width:78%;
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
-
     text-align:center;
-
     z-index:20;
-
 }
 /* ============================= */
 
@@ -959,78 +947,6 @@ body{
 
 }
 /* =========================================
-   MOBILE
-========================================= */
-
-@media(max-width:768px){
-
-.intro-card,
-.invite-card,
-.countdown-card,
-.story-card,
-.location-card,
-.rsvp-card,
-.thanks-card{
-
-    width:95%;
-
-    padding:40px 25px;
-
-}
-
-.frame-content{
-
-    width:82%;
-
-}
-
-.gender-title{
-
-    font-size:72px;
-
-}
-
-.parents{
-
-    font-size:42px;
-
-}
-
-.rabbit-boy,
-.rabbit-girl{
-
-    display:none;
-
-}
-
-.flowers{
-
-    width:220px;
-
-}
-
-.timer{
-
-    gap:15px;
-
-}
-
-.timer-box{
-
-    width:110px;
-
-    height:110px;
-
-}
-
-.timer-box span{
-
-    font-size:42px;
-
-}
-
-}
-/* =========================================
    GUEST NAME
 ========================================= */
 
@@ -1096,24 +1012,15 @@ body{
 
     }
 
-    .frame-image{
-
-        width:100%;
-
-    }
-
-    .frame-content{
-
-        width:82%;
-
-        margin-top:10px;
-
-    }
-
-    .hello{
-
-        font-size:42px;
-
+.frame-image{
+    width:95%;
+}
+.frame-content{
+    width:86%;
+    margin-top:0;
+}
+.hello{
+    font-size:36px;
         margin-top:55px;
 
         margin-bottom:8px;
@@ -1130,20 +1037,16 @@ body{
 
     }
 
-    .gender-title{
-
-        font-size:78px;
-
+.gender-title{
+    font-size:64px;
         line-height:.9;
 
         margin-top:-8px;
 
     }
 
-    .parents{
-
-        font-size:42px;
-
+.parents{
+    font-size:34px;
         margin-top:-10px;
 
         margin-bottom:12px;
@@ -1160,48 +1063,31 @@ body{
 
     }
 
-    .flowers{
+.flowers{
+    width:170px;
+}
 
-        width:220px;
+.flowers-left{
+    left:-45px;
+    bottom:-20px;
+}
 
-    }
+.flowers-right{
+    right:-45px;
+    bottom:-20px;
+}
 
-    .flowers-left{
+.rabbit-boy{
+    width:85px;
+    left:45px;
+    bottom:38px;
+}
 
-        left:-45px;
-
-        bottom:-20px;
-
-    }
-
-    .flowers-right{
-
-        right:-45px;
-
-        bottom:-20px;
-
-    }
-
-    .rabbit-boy{
-
-        width:105px;
-
-        left:45px;
-
-        bottom:38px;
-
-    }
-
-    .rabbit-girl{
-
-        width:105px;
-
-        right:55px;
-
-        bottom:38px;
-
-    }
-
+.rabbit-girl{
+    width:85px;
+    right:55px;
+    bottom:38px;
+}
 }
 
 @media (max-width:480px){
